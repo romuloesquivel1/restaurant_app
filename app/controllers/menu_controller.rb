@@ -23,6 +23,6 @@ class MenuController < ApplicationController
   private
 
   def set_cats
-    @cats = Category.all.where(display: true)
+    @cats = Category.where(display: true)
   end
 end

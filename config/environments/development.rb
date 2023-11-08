@@ -5,6 +5,9 @@ Rails.application.configure do
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
+  config.hosts << "3002-cs-38836699-f349-4014-99f1-92128ee81861.cs-asia-east1-jnrc.cloudshell.dev"
+  # fix: Request origin does not match request base_url: https://github.com/rails/rails/issues/22965#issuecomment-172983268
+  config.action_controller.forgery_protection_origin_check = false
 
   # Do not eager load code on boot.
   config.eager_load = false

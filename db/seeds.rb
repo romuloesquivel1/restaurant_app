@@ -39,11 +39,11 @@ Category.create!(heading: 'Desserts', body: 'Rock rails icecream', display: true
   pizza.image.attach(io: open('public/dummy.jpg'), filename: "#{i}_pizza_image.jpg")
   pasta.image.attach(io: open('public/dummy.jpg'), filename: "#{i}_pasta_image.jpg")
   dessert.image.attach(io: open('public/dummy.jpg'), filename: "#{i}_dessert_image.jpg")
-  if i == 5
-    pizza.featured = true
-    pasta.featured = true
-    dessert.featured = true
-  end
+  
+  pizza.featured = rand(10) > 6
+  pasta.featured = rand(10) > 6
+  dessert.featured = rand(10) > 6
+
   pizza.save
   pasta.save
   dessert.save
